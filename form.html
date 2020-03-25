@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>高大資管營報營表</title>
+	<style type="text/css">
+		@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap');
+		*{
+			font-family:  'Noto Sans TC', sans-serif;
+			/* background-color: #34495e; */
+		}
+		h3{
+			color:white;
+			font-weight: lighter;
+			font-size: 1.5em;
+			width: 200px;
+			display: block;
+			margin: 0 auto;
+			
+
+		}
+		body{
+			background-color: #34495e;
+		}
+		label{
+			line-height:36px;
+			width:350px;
+			letter-spacing: 3px;
+			color: white;
+			display: block;
+			margin:10px auto;
+			
+		}
+		input{
+			margin-left: 10px;;
+		}
+		input[type="submit"]{
+			width: 180px;
+			height:50px;
+			border-radius: 5px;
+			display: block;
+			margin:0 auto;
+			/* border:2px solid #005caf; */
+			background-color: #005caf;
+			color:#ddd;
+			border:none;
+		}
+		input[type="submit"]:hover{
+			transition: .5s;
+			width: 200px;
+			background-color: #2ea9df;
+			color:#fff;
+			border:none;
+		}
+		::placeholder{
+			color:#ccc;
+		}
+		.center{
+			width:80%;
+			margin:0 auto;
+			padding: 10px;
+			background-color: rgba(256,256,256,0.3);
+		
+		}
+		textarea{
+			width:300px;
+			min-width:200px;
+			display: block;
+			margin: 0 auto;
+			/* background-color: rgba(256,256,256,0.8); */
+			border:2px solid #fff;
+		}
+		
+	</style>
+
+</head>
+
+<body>
+	<form action="submit.php" method="POST">
+	<div class="center">
+		<h3>高大資管營報名表</h3>
+		
+		<label>姓名:<input type="text" placeholder="請填寫全名" name="sname"><br/></label>
+		<label>性別:
+		男<input type="radio" name="gender" value="M">
+		女<input type="radio" name="gender" value="F"><br/></label>
+		<label>生日:<input type="date" name="birthday"><br/></label>
+		<label>身分證字號:<input type="text" placeholder="僅作為投保用"name="id"><br/></label>
+		<label>聯絡手機:<input type="tel" placeholder="例:0912345678"name="telnum"><br/></label>
+		<label>緊急聯絡人:<input type="text" placeholder="例:王大明"name="username"><br/></label>
+		<label>緊急聯絡人關係:<input type="text" placeholder="例:父子"name="relation"><br/></label>
+		<label>緊急聯絡人手機:<input type="tel" placeholder="例:0912345678"name="tel"><br/></label>
+		<label>居住地:
+			<select name="live[]" multiple>
+				<option value="Northern">北部</option>
+				<option value="Centeral">中部</option>
+				<option value="Southern">南部</option>
+				<option value="East">東部</option>
+			</select><br/>
+		</label>
+		<label>通訊地址:<input type="text" placeholder="目前居住地" name="add"><br/></label>
+		<label>就讀學校:<input type="text" name="school" placeholder="例:私立正心中學"><br/></label>
+		<label>衣服尺寸:
+			<select name="size">
+				<option>S</option>
+				<option>M</option>
+				<option>L</option>
+				<option>XL</option>
+				<option>2XL</option>
+			</select><br/>
+		</label>
+		<label for="say">想說的話:</label>
+		<textarea name="comment"  id="say"></textarea>
+		<br/>
+		<input type="submit" value="送出">
+	</div>
+</body>
+
+</html>
